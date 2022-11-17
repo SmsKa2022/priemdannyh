@@ -1,0 +1,29 @@
+<h1>Ты отлично справляешься и достиг второго уровня!</h1>
+<div class = "d-flex justify-content-center">
+
+
+<form class = "d-flex flex-column align-items-center" action = "/adressbook" method = "POST">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">ФИО</label>
+    <input name = "name" placeholder ="ФИО" class="form-control" >
+      </div>
+       <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Телефон</label>
+    <input name = "phone" placeholder ="Телефон" class="form-control" >
+      </div>
+   
+  <button type="submit" class="btn btn-primary">Отправить</button>
+</form>
+</div>
+<hr/>
+<section class = "d-flex flex-column align-items-center">
+  {{#each listOfPeople}}
+<div class="card my-2" style="width: 18rem;">
+  
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <p class="card-text">{{this.phone}}</p>
+      </div>
+</div>
+{{/each}}
+</section> 
